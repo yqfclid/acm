@@ -1,0 +1,19 @@
+{application, acm,
+ [{description, "An OTP application"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {mod, { acm_app, []}},
+  {applications,
+   [kernel,
+    stdlib,
+    lager,
+    hackney,
+    iconv
+   ]},
+  {env,[{endpoint, <<"acm.aliyun.com">>}]},
+  {modules, []},
+
+  {maintainers, []},
+  {licenses, ["Apache 2.0"]},
+  {links, []}
+ ]}.

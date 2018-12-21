@@ -30,10 +30,10 @@
 %%% API
 %%%===================================================================
 start_listener(RequestOpt) ->
-	supervisor:start_child(acm_sup, [RequestOpt]).
+    supervisor:start_child(acm_sup, [RequestOpt]).
 
 stop_listener(Listener) ->
-	gen_server:cast(Listener, stop).
+    gen_server:cast(Listener, stop).
 %%--------------------------------------------------------------------
 %% @doc
 %% Starts the server
@@ -96,7 +96,7 @@ handle_call(_Request, _From, State) ->
 %% @end
 %%--------------------------------------------------------------------
 handle_cast(stop, State) ->
-	{stop, normal, State};
+    {stop, normal, State};
 
 handle_cast(_Msg, State) ->
     lager:warning("Can't handle msg: ~p", [_Msg]),

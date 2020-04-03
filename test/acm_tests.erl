@@ -23,9 +23,9 @@ acm_test_() ->
 
 start() ->
     error_logger:tty(false),
-    application:set_env(acm, access_key, <<"LTAIN75ax2MpED9f">>),
-    application:set_env(acm, secret_key, <<"VQXuWqDk4uBX1vwAV3lGvVZC0Vxhoh">>),
-    application:set_env(acm, namespace, <<"d764ae3a-dad0-4932-8946-875e89978817">>),
+    application:set_env(acm, access_key, <<"***********">>),
+    application:set_env(acm, secret_key, <<"**********************">>),
+    application:set_env(acm, namespace, <<"****************************">>),
     application:set_env(acm, group, <<"TEST_GROUP">>),
     application:set_env(acm, data_id, <<"test1">>),
     {ok, _} = application:ensure_all_started(acm),
